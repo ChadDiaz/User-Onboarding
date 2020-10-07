@@ -88,6 +88,7 @@ const Form = () => {
                     onChange={inputChange}
                     placeholder="Enter First & Last Name"
                 />
+                {errors.name.length > 0 ? <p className="error">{errors.name}</p> : null}
             </label>
             <label htmlFor='email'>Email
                 <input
@@ -98,6 +99,7 @@ const Form = () => {
                     onChange={inputChange}
                     placeholder="Valid Email Address"
                 />
+                {errors.email.length > 0 ? <p className="error">{errors.email}</p> : null}
             </label>
             <label htmlFor='password'>Password
                 <input
@@ -108,6 +110,7 @@ const Form = () => {
                     onChange={inputChange}
                     placeholder="min 5 / max 10"
                 />
+                {errors.password.length > 0 ? <p className="error">{errors.password}</p> : null}
             </label>
             <label htmlFor='terms' className="terms">
                 <input
@@ -117,6 +120,7 @@ const Form = () => {
                     checked={user.terms}
                     onChange={inputChange}
                 />Terms & Conditions
+                {errors.terms.length > 0 ? <p className="error">{errors.terms}</p> : null}
             </label>
             <button type="submit" disabled={buttonOff}>
                 Submit

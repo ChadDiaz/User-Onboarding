@@ -91,6 +91,11 @@ button:disabled {
   color: rgba(0, 0, 0, 0.1);
   cursor: not-allowed;
 }
+.error {
+  font-size: 1.2rem;
+  color: red;
+}
+
 .terms {
   display: inline-block;
   align-self: self-start;

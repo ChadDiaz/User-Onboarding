@@ -85,6 +85,7 @@ const Form = () => {
                     type='text'
                     name='name'
                     value={user.name}
+                    data-cy="name"
                     onChange={inputChange}
                     placeholder="Enter First & Last Name"
                 />
@@ -95,6 +96,7 @@ const Form = () => {
                     id='email'
                     type='email'
                     name='email'
+                    data-cy="email"
                     value={user.email}
                     onChange={inputChange}
                     placeholder="Valid Email Address"
@@ -106,6 +108,7 @@ const Form = () => {
                     id='password'
                     type='password'
                     name='password'
+                    data-cy="password"
                     value={user.password}
                     onChange={inputChange}
                     placeholder="min 5 / max 10"
@@ -117,12 +120,13 @@ const Form = () => {
                     type='checkbox'
                     id='terms'
                     name='terms'
+                    data-cy='terms'
                     checked={user.terms}
                     onChange={inputChange}
                 />Terms & Conditions
                 {errors.terms.length > 0 ? <p className="error">{errors.terms}</p> : null}
             </label>
-            <button type="submit" disabled={buttonOff}>
+            <button type="submit" disabled={buttonOff} data-cy='submit'>
                 Submit
             </button>
             <pre>{JSON.stringify(post, null, 2)}</pre>
